@@ -1,0 +1,9 @@
+[package]
+name = "macos-input-poc"
+version = "0.1.0"
+edition = "2021"
+description = "PoC: macOS CGEventTap/Post + multi-display coordinate handling"
+
+[dependencies]
+core-graphics = "0.24"
+core-foundation = "0.10"

@@ -1,0 +1,27 @@
+[workspace]
+resolver = "2"
+members = ["crates/*"]
+exclude = ["poc/macos-input-poc", "poc/windows-input-poc", "poc/dtls-poc"]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+
+[workspace.dependencies]
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+toml = "0.8"
+tokio = { version = "1", features = ["full"] }
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+thiserror = "2"
+uuid = { version = "1", features = ["v4", "serde"] }
+proptest = "1"
+bincode = "1"
+webrtc-dtls = "0.12"
+webrtc-util = "0.11"
+rcgen = "0.13"
+ring = "0.17"
+clap = { version = "4", features = ["derive"] }
+tokio-util = "0.7"

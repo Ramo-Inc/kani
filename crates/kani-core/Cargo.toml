@@ -1,0 +1,12 @@
+[package]
+name = "kani-core"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+kani-proto = { path = "../kani-proto" }
+tracing = { workspace = true }
+thiserror = { workspace = true }
+
+[dev-dependencies]
+uuid = { workspace = true }

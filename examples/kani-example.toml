@@ -1,0 +1,38 @@
+[server]
+host_id = "11111111-1111-1111-1111-111111111111"
+bind_port = 24900
+
+[[hosts]]
+host_id = "11111111-1111-1111-1111-111111111111"
+name = "macbook"
+address = "192.168.1.10"
+
+[[hosts.displays]]
+id = 0
+origin = [0, 0]
+resolution = [3840, 2160]
+scale_factor = 2.0
+orientation = "Normal"
+
+[[hosts]]
+host_id = "22222222-2222-2222-2222-222222222222"
+name = "windows-pc"
+address = "192.168.1.20"
+
+[[hosts.displays]]
+id = 0
+origin = [0, 0]
+resolution = [2560, 1440]
+scale_factor = 1.0
+orientation = "Normal"
+
+[[border_links]]
+from_host = "11111111-1111-1111-1111-111111111111"
+from_display = 0
+from_edge = "Right"
+from_range = [0.0, 1080.0]
+to_host = "22222222-2222-2222-2222-222222222222"
+to_display = 0
+to_edge = "Left"
+to_range = [0.0, 1440.0]
+mapping = "Linear"

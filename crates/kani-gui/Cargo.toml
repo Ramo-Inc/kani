@@ -1,0 +1,39 @@
+[package]
+name = "kani-gui"
+version.workspace = true
+edition.workspace = true
+
+[[bin]]
+name = "kani-gui"
+path = "src/main.rs"
+
+[dependencies]
+kani-proto = { path = "../kani-proto" }
+kani-platform = { path = "../kani-platform" }
+kani-app = { path = "../kani-app", default-features = false }
+kani-transport = { path = "../kani-transport" }
+kani-clipboard = { path = "../kani-clipboard" }
+tokio = { workspace = true }
+tokio-util = { workspace = true }
+eframe = "0.33"
+tray-icon = "0.21"
+muda = "0.17"
+uuid = { workspace = true }
+tracing = { workspace = true }
+tracing-subscriber = { workspace = true }
+clap = { workspace = true }
+serde = { workspace = true }
+toml = { workspace = true }
+raw-window-handle = "0.6"
+image = { version = "0.25", default-features = false, features = ["png"] }
+rfd = "0.15"
+dirs = "6"
+
+[build-dependencies]
+winres = "0.1"
+
+[target.'cfg(target_os = "windows")'.dependencies]
+windows = { version = "0.62", features = [
+    "Win32_Foundation",
+    "Win32_UI_WindowsAndMessaging",
+] }

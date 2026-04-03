@@ -1,0 +1,38 @@
+[package]
+name = "kani-app"
+version.workspace = true
+edition.workspace = true
+
+[lib]
+name = "kani_server"
+path = "src/lib.rs"
+
+[[bin]]
+name = "kani"
+path = "src/main.rs"
+required-features = ["cli"]
+
+[features]
+default = ["cli"]
+cli = ["dep:clap", "dep:tracing-subscriber"]
+
+[dependencies]
+kani-proto = { path = "../kani-proto" }
+kani-core = { path = "../kani-core" }
+kani-platform = { path = "../kani-platform" }
+kani-transport = { path = "../kani-transport" }
+kani-clipboard = { path = "../kani-clipboard" }
+tokio = { workspace = true }
+tokio-util = { workspace = true }
+tracing = { workspace = true }
+thiserror = { workspace = true }
+uuid = { workspace = true }
+serde_json = { workspace = true }
+clap = { workspace = true, optional = true }
+tracing-subscriber = { workspace = true, optional = true }
+
+[dev-dependencies]
+uuid = { workspace = true }
+toml = { workspace = true }
+kani-transport = { path = "../kani-transport" }
+tokio = { workspace = true }

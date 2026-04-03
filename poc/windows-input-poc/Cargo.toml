@@ -1,0 +1,18 @@
+[package]
+name = "windows-input-poc"
+version = "0.1.0"
+edition = "2021"
+description = "PoC: Windows Raw Input capture, SendInput injection, multi-monitor enumeration"
+
+[dependencies.windows]
+version = "0.62"
+features = [
+    "Win32_UI_Input",
+    "Win32_UI_Input_KeyboardAndMouse",
+    "Win32_UI_WindowsAndMessaging",
+    "Win32_Graphics_Gdi",
+    "Win32_Foundation",
+    "Win32_Security",
+    "Win32_System_Threading",
+    "Win32_System_LibraryLoader",
+]

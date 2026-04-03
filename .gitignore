@@ -1,0 +1,16 @@
+/target/
+poc/*/target/
+poc/*/Cargo.lock
+**/*.rs.bk
+*.swp
+*.swo
+.DS_Store
+kani.toml
+.superpowers/
+CLAUDE.md
+docs/
+Cargo.lock
+RUST_LOG
+kani-win-debug.log
+run-gui.sh
+run-gui.bat
